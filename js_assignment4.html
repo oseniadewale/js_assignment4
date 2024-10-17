@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+    <title>js_assignment4</title>
+    <style>
+        .all{display:flex;
+            justify-content: center;
+            align-items: center;
+                    }
+        .btn{width:200px;
+        height:40px;}
+        
+    </style>
+</head>
+<body>
+    <div class="container-fluid all">
+    <div>
+        <h2 class="me-6">User Registration Form</h2>
+        <form action="">
+            *All Fields are Required <br> <br>
+
+            <label for="username">Username</label><br>
+            <input type="text" id="username" name='username' placeholder= "Enter Username" value="" form-control> <br><br>
+
+            <label for ="password">Password</label> <br>
+            <input type="password" id="password" name="password" placeholder="Enter Password" value="" form-control> <br><br>
+
+            <label for ="cpassword">Confirm Password</label> <br>
+            <input type="password" id="cpassword" name="cpassword" placeholder="Confirm Password" value=""> <br><br>
+            <button type="button" class="btn btn-lg btn-primary" onclick="access(); confirm()">Register</button>
+        </form>
+
+    </div>
+    <script>
+         function confirm(){
+            var user = document.getElementById('username').value
+            var pass = document.getElementById('password').value
+            var cpass = document.getElementById('cpassword').value
+
+            if(pass != cpass){
+                     alert('Password mismatch');
+            }else{
+                     alert('Registration' + ' Successful');
+                 }
+                
+            }
+           
+        function access(){
+            var user = document.getElementById('username').value
+            var pass = document.getElementById('password').value
+            var cpass = document.getElementById('cpassword').value
+
+            if ((user && pass && cpass)){
+                alert('Registration' + ' Successful');
+            }else{
+                alert('validation '+ 'error');
+            } 
+
+
+         
+           
+
+        }
+
+
+        
+
+        
+
+       
+
+    </script>
+    </div>
+</body>
+</html>
